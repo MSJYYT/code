@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.facebook.presto.hadoop:hadoop-apache2:0.6" type="repository">
+    <properties maven-id="com.facebook.presto.hadoop:hadoop-apache2:0.6" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hadoop-apache2-0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

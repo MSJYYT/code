@@ -8,26 +8,26 @@ def loadDataSet():
         lineArr = line.strip().split()
         dataMat.append([1.0,float(lineArr[0]),float(lineArr[1])])
         labelMat.append(int(lineArr[2]))
-    return dataMat,labelMat
+    return dataMat,labelMat#dataMat100行3列，labelMat1行100列
 
 def sigmoid(inX):
-    return 1.0/(1+exp(-inX))
+    return longfloat(1.0/(1+exp(-inX)))
 
 #梯度上升算法
 def gradAscent(dataMatIn, classLabels):
     #一次只用一个样本点更新回归系数w
-    dataMatrix = mat(dataMatIn)
+    dataMatrix = mat(dataMatIn)#100行3列
     #标签向量转置为列矩阵
-    labelMat = mat(classLabels).transpose()
-    m,n = shape(dataMatrix)
+    labelMat = mat(classLabels).transpose()#100行1列
+    m,n = shape(dataMatrix)#m=100，n=3
     alpha = 0.001
-    maxCycles = 500
+    maxCycles = 300
     weights = ones((n,1))
     for k in range(maxCycles):
         h = sigmoid(dataMatrix*weights)
         error = (labelMat - h)
         weights = weights + alpha * dataMatrix.transpose() * error
-    return weights
+    return weights#矩阵3行1列
 
 #随机梯度上升算法
 def stocGradAscent0(dataMatrix,classLabels):
@@ -117,10 +117,11 @@ def plotBestFit(weights,weights1,weights2):
     plt.ylabel('X2')
     plt.show()
 
-dataArr,labelMat = loadDataSet()
-weights = gradAscent(dataArr,labelMat)
+if __name__ == "__main__":
+    dataArr,labelMat = loadDataSet()
+    weights = gradAscent(dataArr,labelMat)
 
-weights1 = stocGradAscent0(array(dataArr),labelMat)
+    weights1 = stocGradAscent0(array(dataArr),labelMat)
 
-weights2 = stocGradAscent1(array(dataArr),labelMat)
-plotBestFit(array(weights),weights1,weights2)
+    weights2 = stocGradAscent1(array(dataArr),labelMat)
+    plotBestFit(array(weights),weights1,weights2)

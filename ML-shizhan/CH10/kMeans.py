@@ -52,11 +52,15 @@ def kMeans(dataSet,k,distMeas=distEclud,createCent=randCent):
 #二分K-均值聚类算法
 def biKmeans(dataSet,k,distMeas=distEclud):
     m = shape(dataSet)[0]
+    #存储数据集中每个点的分配结果及平方误差
     clusterAssment = mat(zeros((m,2)))
+    #计算整个数据集的质心，并用一个列表来保留所有质心
     centroid0 = mean(dataSet,axis=0).tolist()[0]
     centList = [centroid0]
+    #每个点到质心的误差值
     for j in range(m):
         clusterAssment[j,1] = distMeas(mat(centroid0),dataSet[j,:])**2
+    
     while (len(centList) < k):
         lowestSSE = inf
         for i in range(len(centList)):

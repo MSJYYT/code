@@ -60,26 +60,40 @@ def biKmeans(dataSet,k,distMeas=distEclud):
     #每个点到质心的误差值
     for j in range(m):
         clusterAssment[j,1] = distMeas(mat(centroid0),dataSet[j,:])**2
-    
-    while (len(centList) < k):
+
+    while (len(centList) < k):#该循环会不停对簇进行划分，直到得到想要的簇数目为止，为此需要比较划分前后的sse
         lowestSSE = inf
-        for i in range(len(centList)):
+        for i in range(len(centList)):#遍历簇列表centList中的每个簇来决定最佳的簇进行划分
+            # 对每个簇，对该簇中的所有点看成一个小的数据集ptsInCurrCluster
+            #.A将矩阵转为数组
+            #表示（clusterAssment第0列等于i的元素坐标，取行坐标）这些坐标映射到dataset中这些行（所有列）
             ptsInCurrCluster = dataSet[nonzero(clusterAssment[:,0].A==i)[0],:]
+            # 将ptsInCurrCluster输入到函数kmeans()（k=2）中进行处理生成2个质心簇，并给出每个簇的误差值
             centroidMat,splitClustAss = kMeans(ptsInCurrCluster,2,distMeas)
+
+            # 误差与剩余数据集的误差之和将作为本次划分的误差
             sseSplit = sum(splitClustAss[:,1])
             sseNotSplit = sum(clusterAssment[nonzero(clusterAssment[:,0].A!=i)[0],1])
             print('sseSplit,and notSplit:',sseSplit,sseNotSplit)
+            # 如果该划分的sse值最小，则本次划分保存
             if (sseSplit + sseNotSplit) < lowestSSE:
+                #一旦决定了要划分的簇，就要执行实际划分操作，
+                # 即将要划分的簇中所有点的簇分配结果进行修改即可。
+                # 当使用KMEANS()函数并簇数为2时，得到两个编号0与1的结果簇，
+                # 需要将这些簇编号修改改为划分簇与新加簇的编号，
+                # 该过程通过2个数组过滤器完成
                 bestCentToSplit = i
-                bestNewCents = centroidMat
+                bestNewCents = centroidMat#新划分出的质心
                 bestClustAss = splitClustAss.copy()
                 lowestSSE = sseSplit + sseNotSplit
         bestClustAss[nonzero(bestClustAss[:,0].A==1)[0],0] = len(centList)
         bestClustAss[nonzero(bestClustAss[:,0].A==0)[0],0] = bestCentToSplit
         print('the bestCentToSplit is:',bestCentToSplit)
         print('the len of bestClustAss is:',len(bestClustAss))
-        centList[bestCentToSplit] = bestNewCents[0,:]
-        centList.append(bestNewCents[1,:])
+        # 新的簇分配结果被更新
+        centList[bestCentToSplit] = bestNewCents[0,:].tolist()[0]
+        # 新的质心添加到centlist中
+        centList.append(bestNewCents[1,:].tolist()[0])
         clusterAssment[nonzero(clusterAssment[:,0].A==bestCentToSplit)[0],:] = bestClustAss
     return mat(centList),clusterAssment
 
@@ -96,10 +110,15 @@ def show(dataSet, k, centroids, clusterAssment):
     plt.show()
 
 if __name__ == "__main__":
-    dataMat = mat(loadDataSet('testSet.txt'))
-    myCentroids, clustAssing = kMeans(dataMat, 4)
+    dataMat = mat(loadDataSet('testSet2.txt'))
+    myCentroids, clustAssing = biKmeans(dataMat, 3)
     print(myCentroids)
-    show(dataMat, 4, myCentroids, clustAssing)
+    show(dataMat, 3, myCentroids, clustAssing)
+    # dataMat = mat(loadDataSet('testSet2.txt'))
+    # myCentroids, clustAssing = biKmeans(dataMat, 3)
+    # print(myCentroids)
+    # show(dataMat, 3, myCentroids, clustAssing)
+
 
 
 

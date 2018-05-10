@@ -19,7 +19,7 @@ def scanD(D, Ck,minSupport):
     for tid in D:
 
         for can in Ck:
-            print(can)
+
             # 测试是否 can 中的每一个元素都在 tid 中
 
             if can.issubset(tid):
@@ -37,16 +37,48 @@ def scanD(D, Ck,minSupport):
     supportData = {}
     for key in ssCnt:
         support = ssCnt[key]/numItems
-        print(support)
+
         if support >= minSupport:
             retList.insert(0,key)
         supportData[key] = support
     return retList,supportData
 
+# dataSet = loadDataSet()
+# C1 = creatC1(dataSet)
+#
+# D = [set(fset) for fset in dataSet]
+#
+# L1,suppData0 = scanD(D,C1,0.5)
+# print(list(L1))
+
+
+def aprioriGen(Lk,k):
+    retList = []
+    lenLk = len(Lk)
+    for i in range(lenLk):
+        for j in range(i+1,lenLk):
+            L1 = list(Lk[i])[:k-2];L2 = list(Lk[j])[:k-2]
+            L1.sort();L2.sort()
+            if L1 == L2:
+                retList.append(Lk[i] | Lk[j])
+    return retList
+
+def apriori(dataSet,minSupport = 0.5):
+    C1 = creatC1(dataSet)
+    D = [set(fset) for fset in dataSet]
+    L1,supportData = scanD(D,C1,minSupport)
+    L = [L1]
+    k = 2
+    while (len(L[k-2]) > 0):
+        Ck = aprioriGen(L[k-2],k)
+        Lk,supK = scanD(D,Ck,minSupport)
+        supportData.update(supK)
+        L.append(Lk)
+        k += 1
+    return L,supportData
 dataSet = loadDataSet()
-C1 = creatC1(dataSet)
 
-D = [set(fset) for fset in dataSet]
+L,suppData = apriori(dataSet)
+print(L)
+print(L[0])
 
-L1,suppData0 = scanD(D,C1,0.5)
-print(list(L1))

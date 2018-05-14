@@ -78,7 +78,61 @@ def apriori(dataSet,minSupport = 0.5):
     return L,supportData
 dataSet = loadDataSet()
 
-L,suppData = apriori(dataSet)
-print(L)
-print(L[0])
+
+#找出关联规则
+#L：频繁项集列表
+#supportData:频繁项集支持度字典
+#minconf:最小可信度阈值
+#生成一个包含可信度的规则列表
+def generatrRules(L,supportData,minConf=0.7):
+    bigRuleList = []
+    #从包含两个以上元素的项集开始规则构建
+    for i in range(1,len(L)):
+        for freqSet in L[i]:
+            #对每个频繁项集创建只包含单个元素的集合的列表
+            H1 = [frozenset([item]) for item in freqSet]
+            if (i > 1):
+
+                rulesFromConseq(freqSet,H1,supportData,bigRuleList,minConf)
+            else:
+
+                clacConf(freqSet,H1,supportData,bigRuleList,minConf)
+    return bigRuleList
+
+#生成候选规则集合
+#freqSet:某一项频繁项集
+#H:把freqSet分成单个元素组成的列表
+def clacConf(freqSet,H,supportData,br1,minConf=0.7):
+    prunedH = []
+    for conseq in H:
+        #一条规则P->H的可信度定义为support(P|H)/support(P)
+        #freqSet相当于P|H
+        conf = supportData[freqSet]/supportData[freqSet-conseq]
+        if conf >= minConf:
+            print(conseq,'--->',freqSet-conseq,'conf:',conf)
+            br1.append((freqSet-conseq,conseq,conf))
+            prunedH.append(conseq)
+    return prunedH
+
+#对规则进行评估
+def rulesFromConseq(freqSet,H,supportData,br1,minConf=0.7):
+    m = len(H[0])
+
+    if (len(freqSet) > (m+1)):
+        Hmp1 = aprioriGen(H,m+1)
+
+        Hmp1 = clacConf(freqSet,Hmp1,supportData,br1,minConf)
+
+        if (len(Hmp1) > 1):
+
+            rulesFromConseq(freqSet,Hmp1,supportData,br1,minConf)
+
+if __name__ == '__main__':
+    # L,suppData = apriori(dataSet)
+    #
+    # rules = generatrRules(L,suppData,minConf=0.7)
+    mushDatSet = [line.split() for line in open('mushroom.dat').readlines()]
+
+    L,suppData = apriori(mushDatSet,minSupport=0.3)
+    print(len(L))
 

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class BPNet(object):
     #构造方法
-    def __init__(self,net):
+    def __init__(self):
         #以下参数需要手工设置
         self.eb = 0.01      #误差容限：当误差小于这个值时，算法收敛，程序停止
         self.iterator = 0   #算法收敛时的迭代次数
@@ -135,6 +135,28 @@ class BPNet(object):
                 plt.scatter(mydata[0,0],mydata[0,1],c='red',marker='s')
             i += 1
 
+
+if __name__ == '__main__':
+    #数据集
+    bpnet = BPNet()
+    bpnet.loadDataSet("testSet2.txt")
+    bpnet.dataMat = bpnet.normalize(bpnet.dataMat)
+    #绘制数据集散点图
+    bpnet.drawClassScatter(plt)
+
+    #bp神经网络进行数据分类
+    bpnet.bpTrain()
+    print(bpnet.out_wb)
+    print(bpnet.hi_wb)
+
+    #计算和绘制分类线
+    x,z = bpnet.BPClassfier(-3.0,3.0)
+    bpnet.classfyLine(plt,x,z)
+    plt.show()
+
+    #绘制误差曲线
+    bpnet.TrendLine(plt)
+    plt.show()
 
 
 

@@ -101,11 +101,31 @@ class BPNet(object):
                 self.out_wb = self.out_wb+(1.0-self.mc)*self.eta*dout_wb+self.mc*dout_wbOld
                 self.hi_wb = self.hi_wb+(1.0-self.mc)*self.eta*dhi_wb+self.mc*dhi_wbOld
             dout_wbOld = dout_wb;dhi_wbOld = dhi_wb
-
-
     def BPClassfier(self,start,end,steps=30):#BP网络分类器
+        x = linspace(start,end,steps)   #linspace()通过指定开始值、终值和元素个数创建表示等差数列的一维数组，可以通过endpoint参数指定是否包含终值，默认值为True，即包含终值。
+        xx = mat(ones((steps,steps)))
+        xx[:,0:steps] = x
+        yy = xx.T
+        z = ones((len(xx),len(yy)))
+        for i in range(len(xx)):
+            for j in range(len(yy)):
+                xi = [];tauex=[];tautemp=[]
+                mat(xi.append([xx[i,j],yy[i,j],1]))
+                hi_input = self.hi_wb*(mat(xi).T)
+                hi_out = self.logistic(hi_input)
+                taumrow,taucol = shape(hi_out)
+                tauex = mat(ones((1,taumrow+1)))
+                tauex[:,0:taumrow] = (hi_out.T)[:,0:taumrow]
+                out_input = self.out_wb*(mat(tauex).T)
+                out = self.logistic(out_input)
+                z[i,j] = out
+        return x,z
     def classfyLine(self,plt,x,z):      #绘制分类线
+        plt.contour(x,x,z,1,colors='black')
     def TrendLine(self,plt,color='r'):  #绘制趋势线，可调整颜色
+        X = linspace(0,self.maxiter,self.maxiter)
+        Y = log2(self.errlist)
+        plt.plot(X,Y,color)
     def drawClassScatter(self,plt):     #绘制分类点
         i = 0
         for mydata in self.dataMat:

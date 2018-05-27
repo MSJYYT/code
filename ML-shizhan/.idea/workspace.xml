@@ -14,7 +14,13 @@
     <SUITE FILE_PATH="coverage/ML_shizhan$adaboost.coverage" NAME="adaboost Coverage Results" MODIFIED="1525272820746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH07" />
     <SUITE FILE_PATH="coverage/ML_shizhan$bayes.coverage" NAME="bayes Coverage Results" MODIFIED="1524184169230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH04" />
     <SUITE FILE_PATH="coverage/ML_shizhan$kNN.coverage" NAME="kNN Coverage Results" MODIFIED="1523424524153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH02" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/ML_shizhan$secom.coverage" NAME="secom Coverage Results" MODIFIED="1526480145301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH13" />
+=======
+    <SUITE FILE_PATH="coverage/ML_shizhan$kMeans.coverage" NAME="kMeans Coverage Results" MODIFIED="1525870850070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH10" />
+    <SUITE FILE_PATH="coverage/ML_shizhan$svdRec.coverage" NAME="svdRec Coverage Results" MODIFIED="1526649952514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH14" />
+    <SUITE FILE_PATH="coverage/ML_shizhan$regression.coverage" NAME="regression Coverage Results" MODIFIED="1525444018226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH08" />
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
     <SUITE FILE_PATH="coverage/ML_shizhan$fpGrowth.coverage" NAME="fpGrowth Coverage Results" MODIFIED="1526309657133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH12" />
     <SUITE FILE_PATH="coverage/ML_shizhan$logRegres.coverage" NAME="logRegres Coverage Results" MODIFIED="1524450321229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH05" />
     <SUITE FILE_PATH="coverage/ML_shizhan$boost.coverage" NAME="boost Coverage Results" MODIFIED="1525443954221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CH07" />
@@ -27,16 +33,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="abalone.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CH08/abalone.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="regression.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH08/regression.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,7 +46,11 @@
       <file leaf-file-name="regTree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH09/regTree.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2403">
+=======
+            <state relative-caret-position="2314">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
               <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
               <folding />
             </state>
@@ -60,7 +60,11 @@
       <file leaf-file-name="kMeans.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH10/kMeans.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="189">
+=======
+            <state relative-caret-position="182">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
               <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -72,7 +76,11 @@
       <file leaf-file-name="apriori.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH11/apriori.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="3591">
+=======
+            <state relative-caret-position="3458">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
               <caret line="133" column="20" lean-forward="false" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
               <folding />
             </state>
@@ -82,7 +90,11 @@
       <file leaf-file-name="fpGrowth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH12/fpGrowth.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2700">
+=======
+            <state relative-caret-position="2600">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
               <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding />
             </state>
@@ -92,14 +104,18 @@
       <file leaf-file-name="pca.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH13/pca.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1053">
+=======
+            <state relative-caret-position="1014">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="48" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="secom.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="secom.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CH13/secom.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -111,6 +127,41 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="svdRec.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CH14/svdRec.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_methods.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/_methods.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1690">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fromnumeric.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/fromnumeric.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76492">
+              <caret line="2953" column="0" lean-forward="false" selection-start-line="2953" selection-start-column="0" selection-end-line="2953" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -145,6 +196,7 @@
         <option value="$PROJECT_DIR$/CH12/fpGrowth.py" />
         <option value="$PROJECT_DIR$/CH13/pca.py" />
         <option value="$PROJECT_DIR$/CH13/secom.py" />
+        <option value="$PROJECT_DIR$/CH14/svdRec.py" />
       </list>
     </option>
   </component>
@@ -255,6 +307,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,7 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,7 +338,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.secom">
+  <component name="RunManager" selected="Python.svdRec">
     <configuration name="apriori" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -320,25 +372,6 @@
       <module name="ML-shizhan" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CH12/fpGrowth.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="kMeans" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CH10" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ML-shizhan" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CH10/kMeans.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -382,20 +415,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="svdRec" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CH14" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ML-shizhan" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CH14/svdRec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.kMeans" />
-      <item index="1" class="java.lang.String" itemvalue="Python.apriori" />
-      <item index="2" class="java.lang.String" itemvalue="Python.fpGrowth" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pca" />
-      <item index="4" class="java.lang.String" itemvalue="Python.secom" />
+      <item index="0" class="java.lang.String" itemvalue="Python.apriori" />
+      <item index="1" class="java.lang.String" itemvalue="Python.fpGrowth" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pca" />
+      <item index="3" class="java.lang.String" itemvalue="Python.secom" />
+      <item index="4" class="java.lang.String" itemvalue="Python.svdRec" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.secom" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pca" />
-        <item index="2" class="java.lang.String" itemvalue="Python.fpGrowth" />
-        <item index="3" class="java.lang.String" itemvalue="Python.apriori" />
-        <item index="4" class="java.lang.String" itemvalue="Python.kMeans" />
+        <item index="0" class="java.lang.String" itemvalue="Python.svdRec" />
+        <item index="1" class="java.lang.String" itemvalue="Python.secom" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pca" />
+        <item index="3" class="java.lang.String" itemvalue="Python.fpGrowth" />
+        <item index="4" class="java.lang.String" itemvalue="Python.apriori" />
       </list>
     </recent_temporary>
   </component>
@@ -416,14 +468,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="867" y="5" width="1048" height="1010" extended-state="1" />
     <editor active="true" />
     <layout>
+=======
+    <frame x="1358" y="-8" width="1040" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17755102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28782895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28782895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4814815" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -457,13 +521,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CH05/testSet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CH04/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -596,6 +653,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2236">
           <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/numeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
         </state>
       </provider>
     </entry>
@@ -649,6 +716,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="285" column="54" lean-forward="false" selection-start-line="285" selection-start-column="54" selection-end-line="285" selection-end-column="54" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#9736#10371#0" expanded="false" />
+            <element signature="e#10055#10058#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1690">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76492">
+          <caret line="2953" column="0" lean-forward="false" selection-start-line="2953" selection-start-column="0" selection-end-line="2953" selection-end-column="0" />
+          <folding />
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
         </state>
       </provider>
     </entry>
@@ -656,7 +746,11 @@
     <entry file="file://D:/anaconda/Lib/site-packages/numpy/core/fromnumeric.py" />
     <entry file="file://$PROJECT_DIR$/CH11/apriori.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="3591">
+=======
+        <state relative-caret-position="3458">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
           <caret line="133" column="20" lean-forward="false" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
           <folding />
         </state>
@@ -664,7 +758,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CH12/fpGrowth.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2700">
+=======
+        <state relative-caret-position="2600">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
           <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding />
         </state>
@@ -672,7 +770,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CH09/regTree.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2403">
+=======
+        <state relative-caret-position="2314">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
           <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
           <folding />
         </state>
@@ -680,7 +782,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CH10/kMeans.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="189">
+=======
+        <state relative-caret-position="182">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -690,7 +796,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CH13/pca.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1053">
+=======
+        <state relative-caret-position="1014">
+>>>>>>> 206a30bb98b2e24edef8e07b8f51ba2eed456535
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="48" selection-end-column="12" />
           <folding />
         </state>
@@ -702,6 +812,16 @@
           <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH14/svdRec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

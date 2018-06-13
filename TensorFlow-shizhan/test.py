@@ -11,7 +11,7 @@ C = [...]
 s = tf.Session()
 for step in range(0,10):
     #为输入创建一个100维的向量
-    input = #construct 100-D input array...
+    input =C #construct 100-D input array...
     #获取Cost，供给输入x
     result = s.run(C,feed_dict={x:input})
     print(step,result)

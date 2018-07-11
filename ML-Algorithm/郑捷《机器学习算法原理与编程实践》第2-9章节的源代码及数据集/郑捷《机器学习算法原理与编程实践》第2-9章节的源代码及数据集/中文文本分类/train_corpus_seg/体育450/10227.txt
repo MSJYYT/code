@@ -1,0 +1,23 @@
+nt NRHS, void   *A, const int lda, int *ipiv, void   *B, const int ldb)
+      {
+      return    clapack_zgesv(Order, N, NRHS, A, lda, ipiv, B, ldb);
+      }
+    
+  #endif
+
+
+
+  #if defined(ARMA_USE_ARPACK)
+
+    void arma_fortran_prefix(arma_snaupd)(blas_int* ido, char* bmat, blas_int* n, char* which, blas_int* nev, float* tol, float* resid, blas_int* ncv, float* v, blas_int* ldv, blas_int* iparam, blas_int* ipntr, float* workd, float* workl, blas_int* lworkl, blas_int* info)
+      {
+      arma_fortran_noprefix(arma_snaupd)(ido, bmat, n, which, nev, tol, resid, ncv, v, ldv, iparam, ipntr, workd, workl, lworkl, info);
+      }
+
+    void arma_fortran_prefix(arma_dnaupd)(blas_int* ido, char* bmat, blas_int* n, char* which, blas_int* nev, double* tol, double* resid, blas_int* ncv, double* v, blas_int* ldv, blas_int* iparam, blas_int* ipntr, double* workd, double* workl, blas_int* lworkl, blas_int* info)
+      {
+      arma_fortran_noprefix(arma_dnaupd)(ido, bmat, n, which, nev, tol, resid, ncv, v, ldv, iparam, ipntr, workd, workl, lworkl, info);
+      }
+
+    void arma_fortran_prefix(arma_cnaupd)(blas_int* ido, char* bmat, blas_int* n, char* which, blas_int* nev, float* tol, void* resid, blas_int* ncv, void* v, blas_int* ldv, blas_int* iparam, blas_int* ipntr, void* workd, void* workl, blas_int* lworkl, float* rwork, blas_int* info)
+  

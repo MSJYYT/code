@@ -1,0 +1,70 @@
+loat  *Y, const int incY)
+      {
+      return      cblas_sdot(N, X, incX, Y, incY);
+      }
+    
+    double wrapper_cblas_ddot(const int N, const double *X, const int incX, const double *Y, const int incY)
+      {
+      return       cblas_ddot(N, X, incX, Y, incY);
+      }
+    
+    void wrapper_cblas_cdotu_sub(const int N, const void *X, const int incX, const void *Y, const int incY, void *dotu)
+      {
+                 cblas_cdotu_sub(N, X, incX, Y, incY, dotu);
+      }
+    
+    void wrapper_cblas_zdotu_sub(const int N, const void *X, const int incX, const void *Y, const int incY, void *dotu)
+      {
+                 cblas_zdotu_sub(N, X, incX, Y, incY, dotu);
+      }
+    
+    
+    
+    void wrapper_cblas_sgemv(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const int M, const int N, const float alpha,
+                             const float *A, const int lda, const float *X, const int incX, const float beta, float *Y, const int incY)
+      {
+                 cblas_sgemv(Order, TransA, M, N, alpha, A, lda, X, incX, beta, Y, incY);
+      }
+    
+    void wrapper_cblas_dgemv(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const int M, const int N, const double alpha,
+                             const double *A, const int lda, const double *X, const int incX, const double beta, double *Y, const int incY)
+      {
+                 cblas_dgemv(Order, TransA, M, N, alpha, A, lda, X, incX, beta, Y, incY);
+      }
+    
+    void wrapper_cblas_cgemv(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const int M, const int N, const void *alpha,
+                             const void *A, const int lda, const void *X, const int incX, const void *beta, void *Y, const int incY)
+      {
+                 cblas_cgemv(Order, TransA, M, N, alpha, A, lda, X, incX, beta, Y, incY);
+      }
+    
+    void wrapper_cblas_zgemv(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const int M, const int N, const void *alpha,
+                             const void *A, const int lda, const void *X, const int incX, const void *beta, void *Y, const int incY)
+      {
+                 cblas_zgemv(Order, TransA, M, N, alpha, A, lda, X, incX, beta, Y, incY);
+      }
+    
+    
+    
+    void wrapper_cblas_sgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_TRANSPOSE TransB,
+                             const int M, const int N, const int K, const float alpha,
+                             const float *A, const int lda, const float *B, const int ldb, const float beta, float *C, const int ldc)
+      {
+                 cblas_sgemm(Order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
+      }
+    
+    void wrapper_cblas_dgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_TRANSPOSE TransB,
+                             const int M, const int N, const int K, const double alpha,
+                             const double *A, const int lda, const double *B, const int ldb, const double beta, double *C, const int ldc)
+      {
+                 cblas_dgemm(Order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
+      }
+    
+    void wrapper_cblas_cgemm(const enum CBLAS_ORDER Order, const enum CBLAS_TRANSPOSE TransA, const enum CBLAS_TRANSPOSE TransB,
+                             const int M, const int N, const int K, const void *alpha,
+                             const void *A, const int lda, const void *B, const int ldb, const void *beta, void *C, const int ldc)
+      {
+                 cblas_cgemm(Order, TransA, TransB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc);
+      }
+    
+    void wrapper_cblas_zgemm(cons

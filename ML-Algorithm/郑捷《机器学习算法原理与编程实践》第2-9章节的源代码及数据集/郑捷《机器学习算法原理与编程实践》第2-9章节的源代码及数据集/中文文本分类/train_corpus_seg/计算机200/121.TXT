@@ -1,0 +1,38 @@
+, beta, C, ldc);
+      }
+    
+    
+    
+    void wrapper_cblas_ssyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo, const enum CBLAS_TRANSPOSE Trans,
+                             const int N, const int K, const float alpha,
+                             const float *A, const int lda, const float beta, float *C, const int ldc)
+      {
+                 cblas_ssyrk(Order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc);
+      }
+    
+    void wrapper_cblas_dsyrk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo, const enum CBLAS_TRANSPOSE Trans,
+                             const int N, const int K, const double alpha,
+                             const double *A, const int lda, const double beta, double *C, const int ldc)
+      {
+                 cblas_dsyrk(Order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc);
+      }
+    
+    
+    
+    void wrapper_cblas_cherk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo, const enum CBLAS_TRANSPOSE Trans,
+                             const int N, const int K, const float alpha,
+                             const void *A, const int lda, const float beta, void *C, const int ldc)
+      {
+                 cblas_cherk(Order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc);
+      }
+    
+    void wrapper_cblas_zherk(const enum CBLAS_ORDER Order, const enum CBLAS_UPLO Uplo, const enum CBLAS_TRANSPOSE Trans,
+                             const int N, const int K, const double alpha,
+                             const void *A, const int lda, const double beta, void *C, const int ldc)
+      {
+                 cblas_zherk(Order, Uplo, Trans, N, K, alpha, A, lda, beta, C, ldc);
+      }
+    
+    
+    
+    int wrapper_clapack_sgetrf(const enum CBLAS_ORDER Order, const int M, 

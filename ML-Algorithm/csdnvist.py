@@ -27,7 +27,7 @@ def run():
                 continue
             print("NO %s complete" % i)
             i = i + 1
-            time.sleep(15)
+            time.sleep(10)
 
 if __name__ == '__main__':
     run()

@@ -10,7 +10,12 @@ def run():
         user_agent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"
         request = urllib.request.Request(url)
         request.add_header("User-Agent", user_agent)
-        content = urllib.request.urlopen(request)
+        #content = urllib.request.urlopen(request)
+        try:
+            content = urllib.request.urlopen(request)
+        except:
+            print("异常链接")
+            continue
         soup = BeautifulSoup(content,'html.parser')
 
         titles = soup.find_all(href=re.compile("details"))

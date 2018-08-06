@@ -5,9 +5,9 @@ import os
 import random
 import sys
 from sklearn.model_selection import train_test_split
+import dlib
 
-
-my_faces_path = './my_faces'
+my_faces_path = './my_faces_output'
 other_faces_path = './other_faces'
 size = 64
 
@@ -49,7 +49,6 @@ def readData(path, h=size, w=size):
             imgs.append(img)
             labs.append(path)
 
-
 readData(my_faces_path)
 readData(other_faces_path)
 # 将图片数据与标签转换成数组
@@ -74,6 +73,7 @@ y_ = tf.placeholder(tf.float32, [None, 2])
 
 keep_prob_5 = tf.placeholder(tf.float32)
 keep_prob_75 = tf.placeholder(tf.float32)
+
 
 
 def weightVariable(shape):
@@ -137,6 +137,10 @@ def cnnLayer():
     out = tf.add(tf.matmul(dropf, Wout), bout)
     return out
 
+#训练模型及存储模型
+ckpt_dir = './model'
+if not os.path.exists(ckpt_dir):
+    os.makedirs(ckpt_dir)
 
 def cnnTrain():
     out = cnnLayer()
@@ -169,16 +173,18 @@ def cnnTrain():
                                             feed_dict={x: batch_x, y_: batch_y, keep_prob_5: 0.5, keep_prob_75: 0.75})
                 summary_writer.add_summary(summary, n * num_batch + i)
                 # 打印损失
-                print(n * num_batch + i, loss)
+                print('loss:',n * num_batch + i, loss)
 
                 if (n * num_batch + i) % 100 == 0:
                     # 获取测试数据的准确率
                     acc = accuracy.eval({x: test_x, y_: test_y, keep_prob_5: 1.0, keep_prob_75: 1.0})
-                    print(n * num_batch + i, acc)
+                    print('acc:',n * num_batch + i, acc)
                     # 准确率大于0.98时保存并退出
-                    if acc > 0.98 and n > 2:
-                        saver.save(sess, './train_faces.model', global_step=n * num_batch + i)
+                    if acc > 0.98:
+                        saver.save(sess,ckpt_dir+ './faces_model.ckpt', global_step=n * num_batch + i)
                         sys.exit(0)
         print('accuracy less 0.98, exited!')
+if __name__ == '__main__':
 
-cnnTrain()
+    cnnTrain()
+

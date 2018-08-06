@@ -4,8 +4,8 @@ import os
 import cv2
 import dlib
 
-input_dir = './input_img'
-output_dir = './other_faces'
+input_dir = './my_faces_input'
+output_dir = './my_faces_output'
 size = 64
 
 if not os.path.exists(output_dir):
